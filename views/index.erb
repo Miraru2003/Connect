@@ -1,0 +1,29 @@
+
+<div>	
+	<div>
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th>タイトル</th>
+						<th>削除</th>
+						<th>編集</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @tasks.each do |task| %>
+						<tr>
+							<td><%= CGI.escapeHTML(task.title) %></td>
+							<td>
+								<form action="/tasks/<%= task.id %>/delete" method="post">
+									<input type="submit" value="削除">
+								</form>
+							</td>
+						</tr>
+					<% end %>
+					<tr><td colspan="6"><a href="/tasks/new">新しいtweet</a></td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

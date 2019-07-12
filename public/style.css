@@ -1,0 +1,13 @@
+.sidebar-sticky{
+    height: 100vh;
+}
+
+ul{
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+}
+
+.fantasmic{
+    right: 0;
+}
