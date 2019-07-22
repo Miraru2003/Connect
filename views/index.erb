@@ -2,7 +2,8 @@
 <div>	
 	<div>
 		<div>
-			<table>
+		<% if !current_user.nil? %>
+        	<table>
 				<thead>
 					<tr>
 						<th>タイトル</th>
@@ -24,6 +25,9 @@
 					<tr><td colspan="6"><a href="/tasks/new">新しいtweet</a></td></tr>
 				</tbody>
 			</table>
+      	<% else %>
+    		<th>ログインしてください</th>
+        <% end %>	
 		</div>
 	</div>
 </div>
