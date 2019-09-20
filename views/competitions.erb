@@ -1,0 +1,34 @@
+
+<div>
+<div>
+	<div>
+		<div class="name-box"><h2>Competition</h2></div>
+		<% if !current_user.nil? %>
+		<div>
+			<a href="/newtweet">
+			 	<i class="fas fa-plus-circle fa-4x icon-fixed"></i>
+             </a>
+			<% @tasks.each do |task| %>
+				<div class="card my-2 users-tweet">
+					<div class="card-header">
+						<img src="./images/profile.png">
+						<%= User.find(task.user_id).name %>
+					</div>
+					<div class="card-body mb-3 card-body1">
+						<%= CGI.escapeHTML(task.title) %>
+						<p>
+							<a href="/delete">
+							<% if  (task.user_id) == (current_user.id)%>
+								<div class="reaction">
+									<form action="/tasks/<%= task.id %>/delete" method="post"><button type="submit pt-2" class="reaction-delete"><i class="fas fa-trash"></i>Delete!</button></form></p>
+								</div>
+							<% end %>
+							</a>
+						</p>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<% else %>
+			ログインしてください
+		<% end %>

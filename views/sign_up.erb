@@ -1,14 +1,27 @@
 <div class="fantasmic">
-    <form action="/signup" method="post">
-        <div>
-            <div>
-                <input name="name" placeholder="名前を入力">
-                <input name="password" type="password" placeholder="パスワードを入力">
-                <input name="password_confirmation"  type="password" placeholder="パスワードをもう一度入力">
-            </div>
-            <div>
-            <input type="submit" value="登録">
-            </div>
-        </div>
-    </form>
+    <div id="container">	<h2>ユーザー登録</h2>
+	<ul>
+		<li>ユーザーを入力してください。登録完了後、管理者に承認されるとログインできるようになります。</li>
+		<li><abbr class="attention" title="入力必須">*</abbr> の付いた項目は入力必須項目です。</li>
+	</ul>
+	<form action="/signup" method="post">
+		<fieldset>
+			<legend>ユーザー登録フォーム</legend>
+			<input type="hidden" name="freo[token]" value="e3abfabf051651330e16918ecde6b5f1">
+			<dl>
+				<dt>名前 <abbr class="attention" title="入力必須">*</abbr></dt>
+					<dd><input name="name" type="text" size="30" value=""></dd>
+				<dt>メールアドレス <abbr class="attention" title="入力必須">*</abbr></dt>
+					<dd><input name="mail" type="text" size="30" value=""></dd>
+				<dt>パスワード <abbr class="attention" title="入力必須">*</abbr></dt>
+					<dd><input name="password" type="password" size="30" value=""></dd>
+				<dt>パスワード再入力 <abbr class="attention" title="入力必須">*</abbr></dt>
+					<dd><input name="password_confirmation" type="password" size="30" value=""></dd>
+			</dl>
+			<p>
+				<input type="submit" value="登録">
+			</p>
+		</fieldset>
+	</form>
+	</div>
 </div>

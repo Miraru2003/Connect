@@ -1,9 +1,30 @@
 <div>
+    <% if @error ==! nil %>
+        <script type="text/javascript">
+            alert('JavaScriptのアラート');
+        </script>
+    <% end %>
     <form action="/tasks" method="post">
         <div>
             <div>
                 <input type="text" name="tweet" placeholder="投稿したい内容を入力してください">
             </div>
+            企画告知期間の締め切り   
+            <div>
+                <input type="date" name="beforestarting">
+            </div> 
+            ユーザーの参加締切
+            <div>
+                <input type="date" name="deadline">
+            </div> 
+            投票締め切り
+            <div>
+                <input type="date" name="voting">
+            </div> 
+            結果発表開始
+            <div>
+                <input type="date" name="result">
+            </div> 
             <div>
                 <input type="submit" value="投稿">
             </div>

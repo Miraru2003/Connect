@@ -10,11 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_120057) do
+ActiveRecord::Schema.define(version: 2019_09_06_105424) do
 
   create_table "tasks", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
+    t.date "beforestarting"
+    t.date "deadline"
+    t.date "voting"
+    t.date "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tasks_on_user_id"
@@ -22,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_06_08_120057) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "mail"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

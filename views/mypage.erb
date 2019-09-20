@@ -1,0 +1,34 @@
+
+
+
+<div>
+	<div>
+		<% if !current_user.nil? %>
+                    <div class="mypage-name name-box"><%= current_user.name %></div>
+
+            <div class="users-tweet">
+                <a href="/newtweet">
+                    <i class="fas fa-plus-circle fa-2x icon-fixed"></i>
+                    </a>
+                    <% @tasks.each do |task| %>
+                        <div class="card my-2">
+                            <div class="card-header">
+                                <img src="./images/profile.png">
+                                <%= User.find(task.user_id).name %>
+                            </div>
+                            <div class="card-body mb-3 card-body1 font-size-mypage">
+                                <%= CGI.escapeHTML(task.title) %>
+                                <p>
+                                    <div class="reaction">
+                                        <form action="/tasks/<%= task.id %>/delete" method="post"><button type="submit pt-2" class="reaction-delete"><i class="fas fa-trash"></i>Delete!</button></form></p>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    <% end %>
+            </div>
+		<% else %>
+			ログインしてください
+        <% end %>
+    </div>
+</div>
