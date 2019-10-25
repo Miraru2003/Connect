@@ -1,0 +1,260 @@
+@charset "UTF-8";
+/* すべての要素のmarginとpaddingを0に設定します */
+* {
+  margin: 0;/* 要素の外側の余白を0にする */
+  padding: 0;/* 要素の内側の余白を0にする */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;/* フォントを指定する */
+}
+
+/* 全てのh1 */
+
+header h1 {
+  color: #ffffff;/* フォントの色を指定する */
+  font-size: 70px;/* フォントの大きさを指定する */
+  font-family: 'IM Fell DW Pica SC', serif;
+  text-align: center;/* 文字・画像を中央にそろえる */
+  
+}
+
+/* h2のclass title */
+
+.title {
+  font-size: 30px;
+  border-left-style:solid;/* 枠線のスタイルを指定する */
+  border-left-color:#015ead;/* 枠線の色を指定する */
+  border-left-width: 10px;/* 枠線の幅を指定する */
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+/* headerはここ */
+
+header {
+  
+  padding-top: 0;
+}
+.relative{
+    position:relative;
+    width:100%;
+    object-fit:contain;
+    
+}
+.absolute{
+    position:absolute;
+    bottom:80px;
+    color:#ffffff;
+    background:rgba(0,0,0,0.6);
+    width:100%;
+    max-width:600px;
+    padding: 0;
+}
+
+/* navはここ */
+
+nav {
+  position:absolute;
+  top: 10px;
+  right:10px;
+  background:rgba(255,255,255,0.5)  
+  
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;/* 文字の装飾を指定する */
+}
+
+nav a:hover {
+  color: #ffcc11;
+}
+
+ul {
+  list-style-type: none;/* リストのマーカーを指定する */
+    text-align:right;
+}
+
+nav ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align:right;
+}
+
+nav li {
+  display: inline;/* 要素の表示形式を指定する */
+  text-align: center;
+}
+
+/* sectionのclass shop */
+.day{
+  padding: 30px;
+  background-color:#ffffdd;
+  margin-top: -30px;
+}
+.day h1{
+  font-size:60px;/* フォントの大きさを指定する */
+  font-family: 'IM Fell DW Pica SC', serif;
+  text-align: center;
+  color: #111111/* フォントの色を指定する */
+}
+.opening{
+    padding: 30px;
+    background-color: #ffffdd;
+}
+.opm{
+    text-align: center;
+}
+.slogan {
+  background-color: #ffffdd;
+  padding: 30px;
+}
+.slogan h1{
+  color: #000000;/* フォントの色を指定する */
+  font-size: 70px;/* フォントの大きさを指定する */
+  font-family: 'IM Fell DW Pica SC', serif;
+  text-align: center;
+  border:dashed #015aed 2px;
+}
+.slogan h2{
+  color:#111111
+}
+.slogan p {
+  font-size: 20px;
+  
+}
+
+.slogan img {
+  float: right;/* 要素の回り込みを指定する */
+}
+
+/* sectionのclass photo */
+
+.photo {
+  padding: 30px;
+  background-image: url(img/wood.jpg);
+  overflow: hidden;
+}
+
+.photo h2 {
+  border-color: #015ead;
+}
+
+.photo p {
+  color: #ffffff;
+  clear: left;/* 要素の回り込みを解除する */
+  margin: 20px;
+}
+
+
+.small {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 15px;
+  margin: 20px;
+  box-shadow: 10px 10px 20px #000000;
+}
+
+.box {
+  float: left;
+}
+
+/* sectionのclass price */
+
+.twitter {
+  padding: 60px;
+  background-color: #ffffdd
+}
+
+.twitter h2 {
+  margin-top: 50px;
+  color: #111111;
+  border-left: 10px solid #015ead;
+}
+.voting{
+  background-color:#ffffdd;
+}
+/* sectionのclass access */
+
+.access {
+  background: #ffffdd;
+  color: #111111;
+  padding: 30px;
+  height: 600px;
+}
+.access h2{
+	margin-top: 50px;
+}
+.access h3 {
+  font-size: 30px;
+  font-family:  YuGothic;
+  margin-top: 0;
+}
+.access ul li {
+  color:#333333;
+    text-align:left;
+}
+.access ul {
+  width: 50%;
+}
+.access li{
+    font-size:30px;
+    display:list-item;
+}
+.access img{
+    width:30%;
+    float:right;	
+}
+/* footerはここ */
+
+footer {
+  height:50px;
+  text-align: center;
+  color: #ffffff;
+  background: #015ead;
+}
+footer img{
+    float: left;
+}
+
+.cc {
+    border : solid 3px black;
+    border-width :60%;
+    border-radius: 5px;
+    margin : 30px;
+    padding : 15px;
+}
+
+.text{
+    font-size :30px;
+    text-align : center;
+}
+
+.margin-left{
+    margin-left : 50px;
+}
+
+.color-border{
+    background: linear-gradient(transparent 50%, yellow 50%);
+}
+
+.color{
+    border-bottom: solid 4px orange;
+}
+
+.text-1{
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.color-2{
+    border-bottom: solid 4px blue;
+}
+
+.text-2{
+    font-size: 20px;
+}

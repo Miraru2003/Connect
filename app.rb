@@ -68,25 +68,13 @@ end
 
 post '/tasks' do
     current_user.tasks.create(
+    title: params[:tweet],
     beforestarting: Date.parse(params[:beforestarting]),
     deadline: Date.parse(params[:deadline]),
-    voting: Date.parse(params[:voting]),
-    result: Date.parse(params[:result]))
-    @error= nil
-    if (Date.parse(params[:deadline]) - Date.today) < ( Date.parse(params[:beforestarting]) - Date.today)
-        @error ="設定された日時の順番に問題があります。"
-        redirect '/newtweet'
-    elsif (Date.parse(params[:voting]) - Date.today) < ( Date.parse(params[:deadline]) - Date.today)
-        @error ="設定された日時の順番に問題があります。"
-        redirect '/newtweet'
-    elsif (Date.parse(params[:result]) - Date.today) < ( Date.parse(params[:voting]) - Date.today)
-        @error ="設定された日時の順番に問題があります。"
-        redirect '/newtweet'   
-    else
-        current_user.tasks.create(title: params[:tweet])
-         redirect '/competetions'
+    voting: Date.parse(params[:voting])
+    )
+    redirect '/competetions'
 end
-    end
 
 post '/tasks/:id/delete' do
     task = Task.find(params[:id])
@@ -131,4 +119,9 @@ get '/mypage' do
         @tasks = current_user.tasks
     end 
     erb :mypage
+end
+
+get '/tasks/:id/detail' do
+    @task = Task.find(params[:id])
+    erb :detail
 end

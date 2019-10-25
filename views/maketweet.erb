@@ -4,7 +4,7 @@
             alert('JavaScriptのアラート');
         </script>
     <% end %>
-    <form action="/tasks" method="post">
+    <form action="/tasks" method="post"　name="competition">
         <div>
             <div>
                 <input type="text" name="tweet" placeholder="投稿したい内容を入力してください">
@@ -21,12 +21,8 @@
             <div>
                 <input type="date" name="voting">
             </div> 
-            結果発表開始
             <div>
-                <input type="date" name="result">
-            </div> 
-            <div>
-                <input type="submit" value="投稿">
+                <input type="submit" value="投稿" onClick="return check();">
             </div>
         </div>
     </form>

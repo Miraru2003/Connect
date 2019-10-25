@@ -1,0 +1,17 @@
+<body>
+<%= User.find(@task.user_id).name %>
+<br>
+<%= @task.title %>
+<br>
+企画告知期間の締め切り
+<br>
+<%= @task.beforestarting.to_s %>
+<br>
+ユーザーの参加締切
+<br>
+<%= @task.deadline %>
+<br>
+投票締め切り
+<br>
+<%= @task.voting %>
+</body>

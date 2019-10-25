@@ -15,10 +15,9 @@ ActiveRecord::Schema.define(version: 2019_09_06_105424) do
   create_table "tasks", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
-    t.date "beforestarting"
-    t.date "deadline"
-    t.date "voting"
-    t.date "result"
+    t.datetime "beforestarting"
+    t.datetime "deadline"
+    t.datetime "voting"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tasks_on_user_id"

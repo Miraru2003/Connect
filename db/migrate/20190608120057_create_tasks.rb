@@ -6,7 +6,6 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.datetime :beforestarting
       t.datetime :deadline
       t.datetime :voting
-      t.datetime :result
       t.timestamps null: false
     end
   end
