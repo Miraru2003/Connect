@@ -20,3 +20,8 @@ class Task < ActiveRecord::Base
         presence: true
     belongs_to :User
 end
+
+class Post < ActiveRecord::Base
+    belongs_to :User
+    belongs_to :tasks
+end
