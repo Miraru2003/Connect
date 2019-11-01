@@ -126,7 +126,8 @@ get '/tasks/:id/detail' do
     erb :detail
 end
 
-get '/post' do
+get '/tasks/:id/post' do
+    @task = Task.find(params[:id])
     erb:post_form
 end
 
@@ -134,7 +135,6 @@ post '/post' do
     current_user.posts.create(
         title_movie: params[:title_movie],
         detail_movie: params[:detail_movie],
-
     )
-    redirect '/home'
+    redirect '/tasks/:id/detail'
 end
